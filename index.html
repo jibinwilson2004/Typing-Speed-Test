@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Typing Speed Test ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">⚡ TYPING SPEED TEST ⚡</h1>
+            <p class="subtitle">Test your typing speed and accuracy</p>
+        </header>
+
+        <!-- Statistics Cards -->
+        <div class="stats-container">
+            <div class="stat-card wpm-card">
+                <div class="stat-title">WPM</div>
+                <div class="stat-value" id="wpm">0</div>
+            </div>
+            <div class="stat-card cpm-card">
+                <div class="stat-title">CPM</div>
+                <div class="stat-value" id="cpm">0</div>
+            </div>
+            <div class="stat-card accuracy-card">
+                <div class="stat-title">Accuracy</div>
+                <div class="stat-value" id="accuracy">0%</div>
+            </div>
+            <div class="stat-card time-card">
+                <div class="stat-title">Time Left</div>
+                <div class="stat-value" id="timeLeft">60s</div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-label">Progress:</div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
+        </div>
+
+        <!-- Text Display -->
+        <div class="text-container">
+            <div class="text-header">
+                <span class="text-label">Text to Type:</span>
+            </div>
+            <div class="text-display" id="textDisplay"></div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-container">
+            <div class="text-header">
+                <span class="text-label">Start Typing:</span>
+            </div>
+            <textarea 
+                class="input-field" 
+                id="inputField" 
+                placeholder="Press any key to start the test..."
+                spellcheck="false"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+            ></textarea>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="button-container">
+            <button class="btn btn-new" id="newTextBtn">
+                🔄 New Text
+            </button>
+            <button class="btn btn-reset" id="resetBtn">
+                ⏹️ Reset
+            </button>
+        </div>
+
+        <!-- Status Message -->
+        <div class="status-message" id="statusMessage">
+            Ready to start typing! Press any key to begin.
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div class="modal" id="resultsModal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <h2 id="modalTitle">Test Complete!</h2>
+                <p id="modalSubtitle">Great job!</p>
+            </div>
+            <div class="modal-body">
+                <div class="result-row">
+                    <span class="result-label">WPM</span>
+                    <span class="result-value" id="resultWPM">0</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">CPM</span>
+                    <span class="result-value" id="resultCPM">0</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Accuracy</span>
+                    <span class="result-value" id="resultAccuracy">0%</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Time</span>
+                    <span class="result-value" id="resultTime">0s</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-modal-new" id="modalNewBtn">🔁 New Test</button>
+                <button class="btn btn-modal-close" id="modalCloseBtn">✖ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

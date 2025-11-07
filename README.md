@@ -4,10 +4,14 @@
 
 ![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tkinter](https://img.shields.io/badge/Tkinter-8.6+-FF6B6B?style=for-the-badge&logo=python&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-**A beautiful, colorful typing speed test application built with Python and Tkinter**
+**A beautiful, colorful typing speed test application available as Desktop (Python/Tkinter) and Web (HTML/CSS/JS) versions**
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
 
@@ -69,13 +73,62 @@
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation & Deployment
 
-### Prerequisites
+### 🌐 Web Application (Recommended)
+
+The web version can be deployed on Vercel in minutes!
+
+#### Option 1: Deploy to Vercel (One-Click)
+
+1. **Fork or clone this repository**
+   ```bash
+   git clone https://github.com/jibinwilson2004/Typing-Speed-Test.git
+   cd Typing-Speed-Test
+   ```
+
+2. **Deploy to Vercel**
+   - Visit [vercel.com](https://vercel.com)
+   - Sign in with GitHub
+   - Click "New Project"
+   - Import this repository
+   - Click "Deploy"
+   - That's it! Your app is live! 🚀
+
+#### Option 2: Deploy via Vercel CLI
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+#### Option 3: Run Locally
+
+Simply open `index.html` in your browser or use a local server:
+
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+
+# Using PHP
+php -S localhost:8000
+```
+
+Then open `http://localhost:8000` in your browser.
+
+### 💻 Desktop Application
+
+#### Prerequisites
 - Python 3.7 or higher
 - Tkinter (usually comes pre-installed with Python)
 
-### Step-by-Step Installation
+#### Step-by-Step Installation
 
 1. **Clone the repository**
    ```bash
@@ -90,7 +143,7 @@
    python3 --version
    ```
 
-3. **Run the application**
+3. **Run the desktop application**
    ```bash
    python speed.py
    # or
@@ -103,7 +156,14 @@ That's it! No additional dependencies required! 🎉
 
 ## 📖 Usage
 
-### Getting Started
+### 🌐 Web Application
+1. **Open the web application** (either deployed on Vercel or locally)
+2. **Start typing** in the input field
+3. **Watch your statistics** update in real-time
+4. **Complete the test** by finishing the text or waiting for the 60-second timer
+5. **View results** in the beautiful modal popup
+
+### 💻 Desktop Application
 
 1. **Launch the Application**
    - Run `python speed.py` from the terminal
@@ -138,14 +198,33 @@ That's it! No additional dependencies required! 🎉
 
 ---
 
+## 🎨 Features Comparison
+
+| Feature | Web Version | Desktop Version |
+|:--------|:-----------:|:---------------:|
+| **Platform** | 🌐 Browser (Any OS) | 💻 Windows/Mac/Linux |
+| **Deployment** | ✅ Vercel/Netlify/GitHub Pages | 📦 Local Installation |
+| **Real-time Stats** | ✅ Yes | ✅ Yes |
+| **60-Second Timer** | ✅ Yes | ✅ Yes |
+| **Color-Coded Feedback** | ✅ Yes | ✅ Yes |
+| **Random Text Generation** | ✅ Yes | ✅ Yes |
+| **Responsive Design** | ✅ Yes (Mobile Friendly) | ⚠️ Desktop Only |
+| **No Installation** | ✅ Yes | ❌ Requires Python |
+| **Offline Usage** | ⚠️ Requires Internet (initial load) | ✅ Yes |
+
 ## 🎨 Screenshots
 
 <div align="center">
 
-### Main Interface
-![Main Screen](https://via.placeholder.com/800x500/1a1a2e/00ff88?text=Typing+Speed+Test+Interface)
+### Web Application Interface
+![Web Main Screen](https://via.placeholder.com/800x500/1a1a2e/00ff88?text=Web+Typing+Speed+Test)
 
-*Beautiful dark theme with colorful stat cards and gradient progress bar*
+*Beautiful responsive web interface with colorful stat cards and gradient progress bar*
+
+### Desktop Application Interface
+![Desktop Main Screen](https://via.placeholder.com/800x500/1a1a2e/00ff88?text=Desktop+Typing+Speed+Test)
+
+*Beautiful desktop application with colorful stat cards and gradient progress bar*
 
 ### Results Window
 ![Results](https://via.placeholder.com/600x400/0f1b2b/00d4ff?text=Results+Window)
@@ -158,18 +237,43 @@ That's it! No additional dependencies required! 🎉
 
 ## 🛠️ Technical Details
 
-### Built With
+### Web Application
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Modern styling with gradients, animations, and responsive design
+- **JavaScript (ES6+)**: Vanilla JavaScript for all functionality
+- **No Dependencies**: Pure client-side application, no frameworks required
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **PWA Ready**: Can be easily converted to a Progressive Web App
+
+### Desktop Application
 - **Python 3.7+**: Core programming language
 - **Tkinter**: GUI framework for the user interface
 - **Random Module**: For generating random text passages
 - **Time Module**: For accurate timing and statistics
 
 ### Architecture
+
+#### Web Version
+- **Pure JavaScript Class**: `TypingSpeedTest` class handles all functionality
+- **Event-Driven**: Responsive to user input and timer events
+- **Real-time Updates**: Continuous UI refresh during typing
+- **DOM Manipulation**: Efficient text rendering with color-coded feedback
+
+#### Desktop Version
 - **Object-Oriented Design**: Clean class-based structure
 - **Event-Driven**: Responsive to user input and timer events
 - **Real-time Updates**: Continuous UI refresh during typing
 
 ### Key Components
+
+#### Web Version
+- `TypingSpeedTest`: Main application class
+- `generateRandomText()`: Random text passage creation
+- `updateStats()`: Real-time statistics calculation
+- `updateTextDisplay()`: Color-coded feedback rendering
+- `startTimer()`: 60-second countdown timer
+
+#### Desktop Version
 - `TypingSpeedTest`: Main application class
 - `create_stat_card()`: Dynamic stat card generation
 - `generate_random_text()`: Random text passage creation
@@ -227,7 +331,11 @@ Contributions are welcome! Here's how you can help:
 - 📈 Statistics history and leaderboards
 - ⌨️ Custom keyboard layouts support
 - 🎵 Sound effects and audio feedback
-- 📱 Responsive design improvements
+- 📱 PWA support for web version
+- 🔄 Sync stats between web and desktop
+- 📊 Advanced analytics and charts
+- 🏆 Achievement system
+- 🌙 Dark/Light mode toggle
 
 ---
 
